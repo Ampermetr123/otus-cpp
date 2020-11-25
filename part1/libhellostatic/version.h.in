@@ -1,8 +1,0 @@
-/**
- * libhellostatic version config file
- **/
-
-#pragma once
- 
-#define LIB_VERSION @libhellostatic_VERSION_MINOR@
-
