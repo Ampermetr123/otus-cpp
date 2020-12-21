@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['get_3c_20i_20_3e',['get&lt; I &gt;',['../print__ip_8h.html#aec9c85bf0ae1b2ff246912c80e553f6e',1,'print_ip.h']]],
-  ['set',['set',['../_c_make_lists_8txt.html#ac1d4d6e17fe38fc996d3fee698724e9e',1,'CMakeLists.txt']]]
+  ['figure',['Figure',['../classmypaint_1_1_figure.html',1,'mypaint']]],
+  ['figure_2eh',['figure.h',['../figure_8h.html',1,'']]],
+  ['figuretype',['FigureType',['../namespacemypaint.html#a354a6727f454e14871e53b379a8656e0',1,'mypaint']]],
+  ['filename',['filename',['../structmypaint_1_1_cmd___import_document.html#ac3ced42c8f6d3e7757b5c03676391650',1,'mypaint::Cmd_ImportDocument']]],
+  ['filled',['filled',['../namespacemypaint.html#a3ef379730600b10764681d6d96042c89a9aa76d8a9f8e25e87dbcafc7aaf556fc',1,'mypaint']]]
 ];

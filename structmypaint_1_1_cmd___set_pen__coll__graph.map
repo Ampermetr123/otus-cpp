@@ -1,0 +1,5 @@
+<map id="mypaint::Cmd_SetPen" name="mypaint::Cmd_SetPen">
+<area shape="rect" id="node2" href="$structmypaint_1_1_controller_command.html" title="mypaint::ControllerCommand" alt="" coords="63,95,278,121"/>
+<area shape="rect" id="node3" href="$structmypaint_1_1_i_command.html" title="mypaint::ICommand" alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node4" href="$classmypaint_1_1_controller.html" title="mypaint::Controller" alt="" coords="185,5,333,32"/>
+</map>

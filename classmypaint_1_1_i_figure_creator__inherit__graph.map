@@ -1,0 +1,5 @@
+<map id="mypaint::IFigureCreator" name="mypaint::IFigureCreator">
+<area shape="rect" id="node2" href="$classmypaint_1_1_circle_creator.html" title="mypaint::CircleCreator" alt="" coords="5,80,175,107"/>
+<area shape="rect" id="node3" href="$classmypaint_1_1_line_creator.html" title="mypaint::LineCreator" alt="" coords="199,80,357,107"/>
+<area shape="rect" id="node4" href="$classmypaint_1_1_rectangle_creator.html" title="mypaint::RectangleCreator" alt="" coords="381,80,577,107"/>
+</map>
