@@ -11,7 +11,6 @@ public:
     ContextManager(ContextManager&& cm) = default;
     ~ContextManager(){
         std::cout << "Good bye!" << std::endl;
-        
     }
     
     std::weak_ptr<CtxType> fetch(IndexType id) {

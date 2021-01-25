@@ -13,9 +13,10 @@ namespace async
 
 
     BulkProcessor::~BulkProcessor() {
+        process();
     }
 
-  
+
     void BulkProcessor::save(std::shared_ptr<Bulk> spBulk, std::string file_suffix) {
         if (!spBulk) {
             return;
@@ -27,7 +28,7 @@ namespace async
         // Ensure each bulk has unique file
         std::filesystem::path fpath = fnamebase + "." + file_suffix + ext;
         for (int i = 0; std::filesystem::exists(fpath); i++) {
-            fpath = fnamebase + "." + file_suffix + "." + std::to_string(i)+ext;
+            fpath = fnamebase + "." + file_suffix + "." + std::to_string(i) + ext;
         };
 
         std::ofstream f(fpath.generic_string());
@@ -41,18 +42,22 @@ namespace async
 
         auto newBulk = spBulk->addCommand(cmd);
         if (newBulk) {
-            if (spBulk->is_valid()) {
-                auto f1 = [sp = spBulk]([[maybe_unused]] int thread_number) { sp->output(std::cout); };
-                pool_cout.make_job_async(f1);
-                
-                auto f2 = [sp = spBulk, this](int thread_number) { save(sp, std::to_string(thread_number)); };
-                pool_file.make_job_async(f2);
-            }
-
+            process();
             spBulk = std::move(newBulk);
         }
-        //  std::cout << "recv " << cmd << std::endl;
+    }
+
+
+    void BulkProcessor::process()  {
+        if (spBulk->is_valid()) {
+            auto f1 = [sp = spBulk]([[maybe_unused]] int thread_number) { sp->output(std::cout); };
+            pool_cout.make_job_async(f1);
+
+            auto f2 = [sp = spBulk, this](int thread_number) { save(sp, std::to_string(thread_number)); };
+            pool_file.make_job_async(f2);
+        }
 
     }
+
 
 } // namespace async

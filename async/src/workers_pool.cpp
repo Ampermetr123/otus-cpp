@@ -12,8 +12,8 @@ WorkersPool::WorkersPool(int num_threads) : threads(num_threads) {
 }
 
 WorkersPool::~WorkersPool() {
-    finish();
-   // abort();
+   finish();
+   //abort();
 }
 
 
