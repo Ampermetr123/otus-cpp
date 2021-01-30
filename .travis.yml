@@ -10,8 +10,6 @@ before_script:
 #- sudo apt-get install libboost-test-dev -y   
 
 script:
-- mkdir build
-- cd build
 - cmake -B build -DCMAKE_BUILD_TYPE:STRING=Release
 - cmake --build build 
 - cmake --build build --target doc
