@@ -7,6 +7,7 @@ before_script:
 - sudo apt-get update -qq 
 - sudo apt-get install doxygen
 - sudo apt-get install graphviz
+- source travis/update-cmake.sh
 #- sudo apt-get install libboost-test-dev -y   
 
 script:
@@ -19,7 +20,7 @@ script:
 - cmake --build build --target package
 
 before_deploy:
-  python makedeploy.py
+  python travis/makedeploy.py
 
 deploy:
   - provider: bintray
