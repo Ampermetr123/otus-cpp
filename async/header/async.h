@@ -1,6 +1,6 @@
 /**
  * @file async.h
- * @author Sergey Simonov (sb.simonov@gmail.com)
+ * @author Sergey Simonov
  * @brief Home work 8 - asyn library.  
  *        Separates incoming commands to bulks and outputs it to console and files.
  *        See datailed information in homework8.pdf.

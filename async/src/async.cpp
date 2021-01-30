@@ -1,3 +1,9 @@
+/**
+ * @file async.cpp
+ * @author  Sergey Simonov
+ * @brief async library implementation
+ */
+
 #define ASYNC_API_EXPORTS
 #include "async.h"
 #include "context_manager.h"
@@ -15,16 +21,16 @@ namespace async {
         auto& id = pair.first;
         return reinterpret_cast<handle_t>(id);
     }
-    
+
     ASYNC_API void receive(handle_t handle, const char* data, std::size_t size) {
         auto wpCtx = cm.fetch(reinterpret_cast<index_t>(handle));
-        auto spCtx = wpCtx.lock();
-        if (spCtx) {
+        if (auto spCtx = wpCtx.lock()) {
             spCtx->receive(std::string(data, size));
         }
     }
 
     ASYNC_API void disconnect(handle_t handle) {
-         cm.free(reinterpret_cast<index_t>(handle));
+        cm.free(reinterpret_cast<index_t>(handle));
     }
-}
+
+} // namespace async

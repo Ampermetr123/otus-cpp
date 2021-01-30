@@ -1,3 +1,9 @@
+/**
+ * @file bulk.h
+ * @author  Sergey Simonov
+ * @brief Bulk, StaticBulk and DynamicBulk structures declaration
+ */
+
 #pragma once
 #include <vector>
 #include <string>
@@ -8,50 +14,42 @@
 namespace async {
 
     class Bulk {
-    public:
-        Bulk(size_t n);
-        virtual ~Bulk();
-        virtual std::unique_ptr<Bulk> addCommand(std::string cmd) = 0;
+    protected:
         static const std::string cmd_bulk_open;
         static const std::string cmd_bulk_close;
-       
-        virtual bool is_valid() = 0;
-        auto start_time(){
-            return std::chrono::system_clock::to_time_t(start);
-        }
-           
+
+    public:
+        Bulk(size_t n);
+        virtual ~Bulk() = default;
+        virtual std::unique_ptr<Bulk> addCommand(std::string cmd) = 0;
+        virtual bool is_valid() const = 0;
+        time_t start_time() const;
         void output(std::ostream& os) const;
-        
+
     protected:
-        void store_command(std::string cmd);
         size_t max_commands;
         std::chrono::system_clock::time_point start;
         std::vector<std::string> commands;
     };
 
-    
-
 
     class StaticBulk : public Bulk {
     public:
         StaticBulk(size_t n);
-        ~StaticBulk();
+        ~StaticBulk() = default;
         std::unique_ptr<Bulk> addCommand(std::string cmd) override;
-        bool is_valid() override;
+        bool is_valid() const override;
     };
-  
-    
 
 
     class DynamicBulk : public Bulk {
     public:
         DynamicBulk(size_t n);
-        ~DynamicBulk();
+        ~DynamicBulk() = default;
         std::unique_ptr<Bulk> addCommand(std::string cmd) override;
-        bool is_valid() override;
+        bool is_valid() const override;
     private:
         int brace_level;
-
     };
 
 }

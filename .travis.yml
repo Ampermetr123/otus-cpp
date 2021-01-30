@@ -1,0 +1,40 @@
+dist:
+  bionic
+language: cpp    
+compiler: gcc
+before_script:
+- echo "deb http://archive.ubuntu.com/ubuntu bionic main universe" | sudo tee -a /etc/apt/sources.list
+- sudo apt-get update -qq 
+- sudo apt-get install doxygen
+- sudo apt-get install graphviz
+#- sudo apt-get install libboost-test-dev -y   
+
+script:
+- mkdir build
+- cd build
+- cmake -B build -DCMAKE_BUILD_TYPE:STRING=Release
+- cmake --build build 
+- cmake --build build --target doc
+- cmake --build build --target package
+
+before_deploy:
+  python makedeploy.py
+
+deploy:
+  - provider: bintray
+    file: "deploy.txt"
+    user: "ampermetr123"
+    key: "$BINTRAY_API_KEY"
+    skip_cleanup: true # to upload artifacts created during the build
+    on:
+      branch: hw8
+    
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+    keep_history: true 
+    local_dir: build/html 
+    target_branch: gh-pages
+    on:
+      branch: hw8
+

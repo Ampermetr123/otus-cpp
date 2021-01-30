@@ -20,3 +20,4 @@ target_link_libraries( async ${CMAKE_THREAD_LIBS_INIT} )
 
 install(TARGETS async DESTINATION lib)
 install(FILES MathFunctions.h DESTINATION include)
+
