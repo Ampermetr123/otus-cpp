@@ -8,9 +8,17 @@ before_script:
 - sudo apt-get install doxygen
 - sudo apt-get install graphviz
 - source travis/update-cmake.sh
-#- sudo apt-get install libboost-test-dev -y   
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-9
 
 script:
+- export CC=gcc-9
+- export CXX=g++-9
 - cmake --version
 - pwd
 - mkdir build
