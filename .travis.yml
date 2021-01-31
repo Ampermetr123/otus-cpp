@@ -22,7 +22,7 @@ script:
 - cmake --version
 - pwd
 - mkdir build
-- cmake -S . -B build -DCMAKE_BUILD_TYPE:STRING=Release
+- cmake  -S . -B build -DCMAKE_BUILD_TYPE:STRING=Release
 - cmake --build build 
 - cmake --build build --target doc
 - cmake --build build --target package
@@ -35,7 +35,7 @@ deploy:
     file: "deploy.txt"
     user: "ampermetr123"
     key: "$BINTRAY_API_KEY"
-    skip_cleanup: true # to upload artifacts created during the build
+    cleanup: false # to upload artifacts created during the build
     on:
       branch: hw8
     
