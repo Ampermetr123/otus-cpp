@@ -8,3 +8,5 @@ Threads::Threads
 )
 
 set_default_opts(async_demo)
+
+install(TARGETS async_demo DESTINATION bin)

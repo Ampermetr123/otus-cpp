@@ -19,5 +19,5 @@ target_include_directories( async
 target_link_libraries( async ${CMAKE_THREAD_LIBS_INIT} )
 
 install(TARGETS async DESTINATION lib)
-install(FILES MathFunctions.h DESTINATION include)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/header/async.h DESTINATION include)
 
