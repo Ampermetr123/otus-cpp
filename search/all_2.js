@@ -1,28 +1,7 @@
 var searchData=
 [
-  ['circle',['Circle',['../classmypaint_1_1_circle.html',1,'mypaint::Circle'],['../classmypaint_1_1_circle.html#addc1213b594b5591ddc15f81f0996be0',1,'mypaint::Circle::Circle()'],['../namespacemypaint.html#a354a6727f454e14871e53b379a8656e0a30954d90085f6eaaf5817917fc5fecb3',1,'mypaint::Circle()']]],
-  ['circlecreator',['CircleCreator',['../classmypaint_1_1_circle_creator.html',1,'mypaint']]],
-  ['clear',['clear',['../classmypaint_1_1_window.html#a70f616cc7a2d8040df2e05cd432edcfc',1,'mypaint::Window::clear()'],['../classmypaint_1_1_my_window.html#a4c221bbc8c90abbdd68b746ab9cb3b42',1,'mypaint::MyWindow::clear()']]],
-  ['cleardata',['clearData',['../classmypaint_1_1_model.html#acdc0eaee1b361bef0720b06fb9e1400c',1,'mypaint::Model']]],
-  ['clearrect',['clearRect',['../classmypaint_1_1_window.html#a8aec876e871bed51c42b929181231863',1,'mypaint::Window::clearRect()'],['../classmypaint_1_1_my_window.html#a166d41e5cf9a46a3cf62a4b7e41214b3',1,'mypaint::MyWindow::clearRect()']]],
-  ['close',['close',['../classmypaint_1_1_controller.html#a59706e95e80728d030097bdf2620ebd0',1,'mypaint::Controller']]],
-  ['cmake_5fminimum_5frequired',['cmake_minimum_required',['../_c_make_lists_8txt.html#a76cb99a0cf652de1e3f9ab5a162cf081',1,'CMakeLists.txt']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../_c_make_lists_8txt.html',1,'']]],
-  ['cmd_5fclose',['Cmd_Close',['../structmypaint_1_1_cmd___close.html',1,'mypaint::Cmd_Close'],['../structmypaint_1_1_cmd___close.html#ac924e9e07af8e374b8e8f832301c63ac',1,'mypaint::Cmd_Close::Cmd_Close()']]],
-  ['cmd_5fexportdocument',['Cmd_ExportDocument',['../structmypaint_1_1_cmd___export_document.html',1,'mypaint::Cmd_ExportDocument'],['../structmypaint_1_1_cmd___export_document.html#a423e5536884a6ff779312bcbbc90d6bf',1,'mypaint::Cmd_ExportDocument::Cmd_ExportDocument()']]],
-  ['cmd_5fimportdocument',['Cmd_ImportDocument',['../structmypaint_1_1_cmd___import_document.html',1,'mypaint::Cmd_ImportDocument'],['../structmypaint_1_1_cmd___import_document.html#abb1891f6fbea2fa2a2770b47b8431332',1,'mypaint::Cmd_ImportDocument::Cmd_ImportDocument()']]],
-  ['cmd_5fnewdocument',['Cmd_NewDocument',['../structmypaint_1_1_cmd___new_document.html',1,'mypaint::Cmd_NewDocument'],['../structmypaint_1_1_cmd___new_document.html#af6e9c2310f3d6857ef1e0db5353cf997',1,'mypaint::Cmd_NewDocument::Cmd_NewDocument()']]],
-  ['cmd_5fremovefigure',['Cmd_RemoveFigure',['../structmypaint_1_1_cmd___remove_figure.html',1,'mypaint::Cmd_RemoveFigure'],['../structmypaint_1_1_cmd___remove_figure.html#ac6c91162cfb49ad241acf464f1abba0a',1,'mypaint::Cmd_RemoveFigure::Cmd_RemoveFigure()']]],
-  ['cmd_5fsetbrush',['Cmd_SetBrush',['../structmypaint_1_1_cmd___set_brush.html',1,'mypaint::Cmd_SetBrush'],['../structmypaint_1_1_cmd___set_brush.html#a91c3de82e90221e4e3a013b563e02560',1,'mypaint::Cmd_SetBrush::Cmd_SetBrush()']]],
-  ['cmd_5fsetpen',['Cmd_SetPen',['../structmypaint_1_1_cmd___set_pen.html',1,'mypaint::Cmd_SetPen'],['../structmypaint_1_1_cmd___set_pen.html#af9e4a237dbb2274c131d5431b952d31e',1,'mypaint::Cmd_SetPen::Cmd_SetPen()']]],
-  ['cmd_5fstartaction',['Cmd_StartAction',['../structmypaint_1_1_cmd___start_action.html',1,'mypaint::Cmd_StartAction'],['../structmypaint_1_1_cmd___start_action.html#ab584007cf901ac2556bd1b604a58c9f6',1,'mypaint::Cmd_StartAction::Cmd_StartAction()']]],
-  ['cmd_5fstopaction',['Cmd_StopAction',['../structmypaint_1_1_cmd___stop_action.html',1,'mypaint::Cmd_StopAction'],['../structmypaint_1_1_cmd___stop_action.html#ac2da734b4323f8a1290e41b21ca0529e',1,'mypaint::Cmd_StopAction::Cmd_StopAction()']]],
-  ['cmd_5fswitchmode',['Cmd_SwitchMode',['../structmypaint_1_1_cmd___switch_mode.html',1,'mypaint::Cmd_SwitchMode'],['../structmypaint_1_1_cmd___switch_mode.html#a25061d81fac9f0a7b674764f349612f3',1,'mypaint::Cmd_SwitchMode::Cmd_SwitchMode()']]],
-  ['cmd_5fwhileaction',['Cmd_WhileAction',['../structmypaint_1_1_cmd___while_action.html',1,'mypaint::Cmd_WhileAction'],['../structmypaint_1_1_cmd___while_action.html#a4014e57b54458cab8214cda101f9d17d',1,'mypaint::Cmd_WhileAction::Cmd_WhileAction()']]],
-  ['color',['color',['../structmypaint_1_1_pen.html#ab0121e001bac772022700a677ea0fbd9',1,'mypaint::Pen::color()'],['../structmypaint_1_1_brush.html#a7dda0825703afc7f84b3a65e1d4c2ab7',1,'mypaint::Brush::color()'],['../namespacemypaint.html#a12c0c6e4e6ea0697dae19c88fe7b9c51',1,'mypaint::Color()']]],
-  ['controller',['Controller',['../classmypaint_1_1_controller.html',1,'mypaint::Controller'],['../classmypaint_1_1_controller.html#a9943a71c670eff0c62ef2ed548218ceb',1,'mypaint::Controller::Controller()'],['../structmypaint_1_1_controller_command.html#a4e099a3ecc8d4fd365689e9d5b8b59f2',1,'mypaint::ControllerCommand::controller()']]],
-  ['controller_2ecpp',['controller.cpp',['../controller_8cpp.html',1,'']]],
-  ['controller_2eh',['controller.h',['../controller_8h.html',1,'']]],
-  ['controllercommand',['ControllerCommand',['../structmypaint_1_1_controller_command.html',1,'mypaint::ControllerCommand'],['../structmypaint_1_1_controller_command.html#af34c6418e4d16e881d09fc51cb6c99fa',1,'mypaint::ControllerCommand::ControllerCommand()']]],
-  ['controllersubscriber',['ControllerSubscriber',['../classmypaint_1_1_controller_subscriber.html',1,'mypaint']]]
+  ['connect',['connect',['../async_8h.html#ae40484e418655e9685f5764a23352edf',1,'async']]],
+  ['context_5fmanager_2eh',['context_manager.h',['../context__manager_8h.html',1,'']]],
+  ['contextmanager',['ContextManager',['../classasync_1_1ContextManager.html',1,'async']]],
+  ['create',['create',['../classasync_1_1ContextManager.html#aff782ac3958424badcd3caf0589da954',1,'async::ContextManager']]]
 ];

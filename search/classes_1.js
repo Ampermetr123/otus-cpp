@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['brush',['Brush',['../structmypaint_1_1_brush.html',1,'mypaint']]]
+  ['contextmanager',['ContextManager',['../classasync_1_1ContextManager.html',1,'async']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['newdocument',['newDocument',['../classmypaint_1_1_controller.html#ae737266b0fae366a99f773558cdb8cd6',1,'mypaint::Controller']]]
+  ['randombracegenerator',['RandomBraceGenerator',['../classRandomBraceGenerator.html#ac6cfab7c6bb7f63143bf4590f6221b67',1,'RandomBraceGenerator']]],
+  ['receive',['receive',['../async_8h.html#aa3a178bad66858bb737d3cf329ae3914',1,'async']]]
 ];

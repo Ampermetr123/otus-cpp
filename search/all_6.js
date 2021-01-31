@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['getcommand',['getCommand',['../classmypaint_1_1_user_input.html#a4beda22ebed80ef4f12aff142755cd2f',1,'mypaint::UserInput']]],
-  ['getdata',['getData',['../classmypaint_1_1_model.html#a1e2f3500750dbcb1c72b29f83c7cbec8',1,'mypaint::Model']]],
-  ['graphdevicecontext',['GraphDeviceContext',['../classmypaint_1_1_graph_device_context.html',1,'mypaint::GraphDeviceContext'],['../classmypaint_1_1_graph_device_context.html#ac2b253056873d5691380258f7d5fc8b9',1,'mypaint::GraphDeviceContext::GraphDeviceContext()']]],
-  ['green',['green',['../namespacemypaint.html#a12c0c6e4e6ea0697dae19c88fe7b9c51a9f27410725ab8cc8854a2769c7a516b8',1,'mypaint']]]
+  ['is_5fvalid',['is_valid',['../classasync_1_1StaticBulk.html#a49fab53d9572e999a5fdaa6b2246ce55',1,'async::StaticBulk::is_valid()'],['../classasync_1_1DynamicBulk.html#ae00d82a9ac851cba664a90c5d2efc31d',1,'async::DynamicBulk::is_valid()']]],
+  ['iterator',['Iterator',['../classGenerator_1_1Iterator.html',1,'Generator']]],
+  ['itergenerator',['IterGenerator',['../classIterGenerator.html',1,'']]]
 ];

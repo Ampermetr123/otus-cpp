@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['add_5fexecutable',['add_executable',['../_c_make_lists_8txt.html#a3827ea29d96253b93f86111ca443985b',1,'CMakeLists.txt']]],
-  ['addfigure',['addFigure',['../classmypaint_1_1_model.html#a1bb7633637fdc9e6c0717ac285054f77',1,'mypaint::Model']]],
-  ['addsubscriber',['addSubscriber',['../classmypaint_1_1_controller.html#a7948eb5ff02bc37c5b6da2912e75714e',1,'mypaint::Controller::addSubscriber()'],['../classmypaint_1_1_model.html#ae7517597d22d3e2c7aebc44c703ac087',1,'mypaint::Model::addSubscriber()']]]
+  ['abort',['abort',['../classasync_1_1WorkersPool.html#aff772502d9bd614b5f97e98cd950b1f3',1,'async::WorkersPool']]],
+  ['addcommand',['addCommand',['../classasync_1_1StaticBulk.html#a9e6ad6576f7eee7532f5216b5e729c8c',1,'async::StaticBulk::addCommand()'],['../classasync_1_1DynamicBulk.html#ad23e77dbad5e27a5657c972ec224f5fc',1,'async::DynamicBulk::addCommand()']]]
 ];

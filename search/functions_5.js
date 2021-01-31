@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['getcommand',['getCommand',['../classmypaint_1_1_user_input.html#a4beda22ebed80ef4f12aff142755cd2f',1,'mypaint::UserInput']]],
-  ['getdata',['getData',['../classmypaint_1_1_model.html#a1e2f3500750dbcb1c72b29f83c7cbec8',1,'mypaint::Model']]],
-  ['graphdevicecontext',['GraphDeviceContext',['../classmypaint_1_1_graph_device_context.html#ac2b253056873d5691380258f7d5fc8b9',1,'mypaint::GraphDeviceContext']]]
+  ['get',['get',['../classGenerator.html#a97f868d087931c071f9eb267dd8a49ae',1,'Generator::get()'],['../classIterGenerator.html#acbe4fe007c89f5590a292c51ddf46141',1,'IterGenerator::get()'],['../classRandomBraceGenerator.html#a5ea651e62b5d52109903e83b1533b502',1,'RandomBraceGenerator::get()']]]
 ];

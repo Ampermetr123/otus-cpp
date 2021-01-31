@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['figure',['Figure',['../classmypaint_1_1_figure.html',1,'mypaint']]],
-  ['figure_2eh',['figure.h',['../figure_8h.html',1,'']]],
-  ['figuretype',['FigureType',['../namespacemypaint.html#a354a6727f454e14871e53b379a8656e0',1,'mypaint']]],
-  ['filename',['filename',['../structmypaint_1_1_cmd___import_document.html#ac3ced42c8f6d3e7757b5c03676391650',1,'mypaint::Cmd_ImportDocument']]],
-  ['filled',['filled',['../namespacemypaint.html#a3ef379730600b10764681d6d96042c89a9aa76d8a9f8e25e87dbcafc7aaf556fc',1,'mypaint']]]
+  ['generator',['Generator',['../classGenerator.html',1,'']]],
+  ['generator_2eh',['generator.h',['../generator_8h.html',1,'']]],
+  ['get',['get',['../classGenerator.html#a97f868d087931c071f9eb267dd8a49ae',1,'Generator::get()'],['../classIterGenerator.html#acbe4fe007c89f5590a292c51ddf46141',1,'IterGenerator::get()'],['../classRandomBraceGenerator.html#a5ea651e62b5d52109903e83b1533b502',1,'RandomBraceGenerator::get()']]]
 ];

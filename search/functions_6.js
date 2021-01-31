@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['importdocument',['importDocument',['../classmypaint_1_1_controller.html#af8cbf711ed988e1b8d9f86587a4007d3',1,'mypaint::Controller']]],
-  ['instance',['Instance',['../class_application.html#a33024991540d2441cb6aca59cde0643b',1,'Application']]]
+  ['is_5fvalid',['is_valid',['../classasync_1_1StaticBulk.html#a49fab53d9572e999a5fdaa6b2246ce55',1,'async::StaticBulk::is_valid()'],['../classasync_1_1DynamicBulk.html#ae00d82a9ac851cba664a90c5d2efc31d',1,'async::DynamicBulk::is_valid()']]]
 ];
