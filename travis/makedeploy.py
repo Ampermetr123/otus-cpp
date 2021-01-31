@@ -20,7 +20,7 @@ text = '''{
 
     "files":
         [{  
-            "includePattern": "%s/build/_CPack_Packages/Linux/DEB/(.*\.deb)", 
+            "includePattern": "%s/build/(.*\.deb)", 
             "uploadPattern": "pool/main/%s/%s/$1",
             "matrixParams": { "deb_distribution": "trusty", "deb_component": "main", "deb_architecture": "amd64"}
         }],

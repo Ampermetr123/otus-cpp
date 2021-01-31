@@ -36,6 +36,7 @@ deploy:
     user: "ampermetr123"
     key: "$BINTRAY_API_KEY"
     cleanup: false # to upload artifacts created during the build
+    skip_cleanup: true
     on:
       branch: hw8
     
