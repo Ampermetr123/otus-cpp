@@ -16,7 +16,7 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-9
-      - libboost_1.75
+      - libboost1.74-dev
 
 script:
 - export CC=gcc-9
