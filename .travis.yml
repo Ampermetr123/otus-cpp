@@ -12,9 +12,11 @@ before_script:
 addons:
   apt:
     sources:
+      - sourceline: 'ppa:mhier/libboost-latest'
       - ubuntu-toolchain-r-test
     packages:
       - g++-9
+      - boost1.75
 
 script:
 - export CC=gcc-9
