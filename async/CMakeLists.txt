@@ -18,6 +18,6 @@ target_include_directories( async
 
 target_link_libraries( async ${CMAKE_THREAD_LIBS_INIT} )
 
-install(TARGETS async DESTINATION lib)
+install(TARGETS async LIBRARY)
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/header/async.h DESTINATION include)
 

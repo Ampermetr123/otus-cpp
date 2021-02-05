@@ -20,14 +20,14 @@ text = '''{
 
     "files":
         [{  
-            "includePattern": "%s/build/(.*\.deb)", 
+            "includePattern": "build/(.*\.deb)", 
             "uploadPattern": "pool/main/%s/%s/$1",
             "matrixParams": { "deb_distribution": "trusty", "deb_component": "main", "deb_architecture": "amd64"}
         }],
 
     "publish": true
 
-}''' % (project_name, os.getenv('TRAVIS_BUILD_NUMBER',0), project_name, project_name[0], project_name)
+}''' % (project_name, os.getenv('TRAVIS_BUILD_NUMBER',0), project_name[0], project_name)
 
 with open("./deploy.txt","w") as f:
     f.write(text)
