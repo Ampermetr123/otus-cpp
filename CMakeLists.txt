@@ -4,9 +4,9 @@ cmake_minimum_required(VERSION 3.14.0 FATAL_ERROR)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 include(utils)
 
-project("async"
+project("bulk_server"
     VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER}
-    DESCRIPTION "OTUS c++ homework #8: async"
+    DESCRIPTION "OTUS c++ homework #9: bulk_server"
     LANGUAGES CXX
 )
 
@@ -25,6 +25,7 @@ list(APPEND EXTRA_INCLUDES "${PROJECT_SOURCE_DIR}/async/inc")
 
 add_subdirectory(async_demo)
 
+add_subdirectory(bulk_server)
 
 # Documentation setup
 
@@ -34,9 +35,11 @@ find_package(Doxygen
              OPTIONAL_COMPONENTS mscgen dia)
 if(DOXYGEN_FOUND)
   
-  # set(DOXYGEN_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/docs")
+  set(DOXYGEN_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/docs")
+  
   # install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/html DESTINATION ${CMAKE_SOURCE_DIR}/docs)
-  set(DOXYGEN_PROJECT_LOGO "${CMAKE_SOURCE_DIR}/logo.png")
+  set(DOXYGEN_PROJECT_LOGO "${CMAKE_SOURCE_DIR}/logo3.png")
+
   set(DOXYGEN_GENERATE_TREEVIEW YES)
   set(DOXYGEN_HIDE_UNDOC_RELATIONS NO)
   set(DOXYGEN_HAVE_DOT YES)
@@ -48,9 +51,14 @@ if(DOXYGEN_FOUND)
   set(DOXYGEN_INTERACTIVE_SVG YES)
   set(DOXYGEN_DOT_GRAPH_MAX_NODES 100)
   set(DOXYGEN_DOT_TRANSPARENT YES)
+  set(DOXYGEN_DOT_MULTI_TARGETS YES)
+  set(USE_MDFILE_AS_MAINPAGE YES)
 
   doxygen_add_docs(doc
-    ${CMAKE_SOURCE_DIR}/async ${CMAKE_SOURCE_DIR}/async_demo 
+    ${CMAKE_SOURCE_DIR}/async 
+    ${CMAKE_SOURCE_DIR}/async_demo
+    ${CMAKE_SOURCE_DIR}/bulk_server 
+
     COMMENT "Generating doxygen documentation for ${PROJECT_NAME}"
   )
 

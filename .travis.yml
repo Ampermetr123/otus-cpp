@@ -24,7 +24,7 @@ script:
 - mkdir build
 - cmake  -S . -B build -DCMAKE_BUILD_TYPE:STRING=Release
 - cmake --build build 
-- cmake --build build --target doc
+#- cmake --build build --target doc
 - cmake --build build --target package
 
 before_deploy:
@@ -38,14 +38,14 @@ deploy:
     cleanup: false # to upload artifacts created during the build
     skip_cleanup: true
     on:
-      branch: hw8
+      branch: hw9
     
-  - provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-    keep_history: true 
-    local_dir: build/html 
-    target_branch: gh-pages
-    on:
-      branch: hw8
+  # - provider: pages
+  #   skip_cleanup: true
+  #   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  #   keep_history: true 
+  #   local_dir: build/html 
+  #   target_branch: gh-pages
+  #   on:
+  #     branch: hw9
 
