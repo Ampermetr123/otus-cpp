@@ -27,7 +27,7 @@ text = '''{
 
     "publish": true
 
-}''' % (project_name, os.getenv('TRAVIS_BUILD_NUMBER',0), project_name, project_name[0], project_name)
+}''' % (project_name, os.getenv('TRAVIS_BUILD_NUMBER',0), project_name[0], project_name)
 
 with open("./deploy.txt","w") as f:
     f.write(text)
