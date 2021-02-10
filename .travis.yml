@@ -5,8 +5,8 @@ compiler: gcc
 before_script:
 - echo "deb http://archive.ubuntu.com/ubuntu bionic main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq 
-#- sudo apt-get install doxygen
-#- sudo apt-get install graphviz
+- sudo apt-get install doxygen
+- sudo apt-get install graphviz
 - source travis/update-cmake.sh
 
 addons:

@@ -11,7 +11,7 @@ project("mapreduce"
 )
 
 # generate docs
-option(BUILD_DOCUMENTATION "Build documentation" ON)
+option(BUILD_DOCUMENTATION "Build documentation" OFF)
 
 
 set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
