@@ -40,6 +40,14 @@ public:
             file.open(file_to_save);
         }
     }
+
+    CheckRepeatsReducer(const CheckRepeatsReducer &rv) {
+        reset(rv.length_factor);
+        file_to_save = std::move(rv.file_to_save);
+        if (file_to_save.size()) {
+            file.open(file_to_save);
+        }
+    }
     
     ~CheckRepeatsReducer() { 
         reset(0); 

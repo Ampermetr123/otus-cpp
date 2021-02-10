@@ -66,15 +66,14 @@ int main(int argc, const char* argv[]) {
         log1 << "Started with [ " << "source file: " << src_file_name <<
             " | mnum: " << mnum << " | rnum: " << rnum << " | files: " << files << " ]\n" << std::endl;
 
-
-        // Creating reducers;
-        std::vector<CheckRepeatsReducer> reducers;
+        // Creating reducers
+        std::vector<reducer_func_t> reducers;
         std::string output_filename;
         for (int i = 1; i <= rnum; i++) {
             if (files) {
                 output_filename = "reducer_" + std::to_string(i) + ".txt";
             }
-            reducers.emplace_back(output_filename);
+            reducers.push_back(CheckRepeatsReducer(output_filename));
         }
 
         // Find miniumum prefix using mapreduce
@@ -82,7 +81,9 @@ int main(int argc, const char* argv[]) {
         while (true)
         {
             prefix_length++;
-            for (auto& r : reducers) r.reset(prefix_length);
+            for (auto& r : reducers){
+                r.target<CheckRepeatsReducer>()->reset(prefix_length);
+            }
 
             mapper_func_t mapper = [prefix_length](std::string& s) -> std::string {
                 if (s.size() > prefix_length) {
@@ -91,12 +92,13 @@ int main(int argc, const char* argv[]) {
                 return s;
             };
 
-            map_reduce(src_file_name, mnum, mapper, reducers);
+            mapreduce::map_reduce(src_file_name, mnum, mapper, reducers);
             
             {   // Check prifix increments have no sence
                 size_t exceed_count = 0;
-                for (auto& r : reducers) {
-                    if (r.max_length() < prefix_length) {
+                for (auto& rf : reducers) {
+                    auto r = rf.target<CheckRepeatsReducer>();
+                    if (r->max_length() < prefix_length) {
                         exceed_count++;
                     }
                 }
@@ -106,12 +108,12 @@ int main(int argc, const char* argv[]) {
                 }
             }
             
-            {   // Check all strigns with prefix length was unique 
+            {   // Check all strigns with prefix length where unique 
                 bool repeats_found = false;
                 for (size_t i = 0; i < reducers.size(); i++) {
-                    auto& r = reducers.at(i);
-                    repeats_found = (repeats_found || r.repeats_found());
-                    log1 << "reducer_" << std::to_string(i) << " -> repeated strings: " << (r.repeats_found() ? "yes" : "no") << std::endl;
+                    auto r = reducers.at(i).target<CheckRepeatsReducer>();
+                    repeats_found = (repeats_found || r->repeats_found());
+                    log1 << "reducer_" << std::to_string(i) << " -> repeated strings: " << (r->repeats_found() ? "yes" : "no") << std::endl;
                 }
                 if (repeats_found == false) {
                     log0 << "Minimum prefix is: " << prefix_length << std::endl;
