@@ -1,3 +1,3 @@
 <map id="async::StaticBulk" name="async::StaticBulk">
-<area shape="rect" id="node2" href="$classasync_1_1Bulk.html" title="{async::Bulk\n||+ Bulk()\l+ ~Bulk()\l+ addCommand()\l+ is_valid()\l+ start_time()\l+ output()\l}" alt="" coords="194,160,333,311"/>
+<area shape="rect" id="node2" href="$classasync_1_1Bulk.html" title="{async::Bulk\n||+ Bulk()\l+ ~Bulk()\l+ add_commad()\l+ is_valid()\l+ start_time()\l+ output()\l}" alt="" coords="196,160,331,311"/>
 </map>

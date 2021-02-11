@@ -2,7 +2,7 @@ var classasync_1_1Bulk =
 [
     [ "Bulk", "classasync_1_1Bulk.html#afcda5cdbebd14ebcbbee05ba0b1647d7", null ],
     [ "~Bulk", "classasync_1_1Bulk.html#a5e245ad6cda68f09f4558919db9b2dfb", null ],
-    [ "addCommand", "classasync_1_1Bulk.html#a109968c3e7f487161989217bbea50ef4", null ],
+    [ "add_commad", "classasync_1_1Bulk.html#aa81ca4b52fdc5ff68df832cdc7389c7a", null ],
     [ "is_valid", "classasync_1_1Bulk.html#a408f920d6ee45161f6ed208bf4c59f66", null ],
     [ "output", "classasync_1_1Bulk.html#a5042d5de4b6ff0bc3217f9eeff6db55d", null ],
     [ "start_time", "classasync_1_1Bulk.html#a7e32ebb72709ad2406f69b01c9ba3414", null ],

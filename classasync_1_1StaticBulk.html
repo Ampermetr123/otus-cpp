@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">async
-   &#160;<span id="projectnumber">0.0.61</span>
+   &#160;<span id="projectnumber">0.0.69</span>
    </div>
    <div id="projectbrief">OTUS c++ homework #8: async</div>
   </td>
@@ -107,9 +107,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7f7b4647b3a0c52bcee82186d1a22508"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasync_1_1StaticBulk.html#a7f7b4647b3a0c52bcee82186d1a22508">StaticBulk</a> (size_t n)</td></tr>
 <tr class="memdesc:a7f7b4647b3a0c52bcee82186d1a22508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Static <a class="el" href="classasync_1_1Bulk.html">Bulk</a>:: Static <a class="el" href="classasync_1_1Bulk.html">Bulk</a> object.  <a href="#a7f7b4647b3a0c52bcee82186d1a22508">More...</a><br /></td></tr>
 <tr class="separator:a7f7b4647b3a0c52bcee82186d1a22508"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e6ad6576f7eee7532f5216b5e729c8c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classasync_1_1Bulk.html">Bulk</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasync_1_1StaticBulk.html#a9e6ad6576f7eee7532f5216b5e729c8c">addCommand</a> (std::string cmd) override</td></tr>
-<tr class="memdesc:a9e6ad6576f7eee7532f5216b5e729c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add command to <a class="el" href="classasync_1_1Bulk.html">Bulk</a> When <a class="el" href="classasync_1_1Bulk.html">Bulk</a> is compleated or interrupted with new Dynamic bulk it constructs and return pointer to new <a class="el" href="classasync_1_1Bulk.html">Bulk</a>.  <a href="#a9e6ad6576f7eee7532f5216b5e729c8c">More...</a><br /></td></tr>
-<tr class="separator:a9e6ad6576f7eee7532f5216b5e729c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1497c953695e7924e808f998b379c5cc"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classasync_1_1Bulk.html">Bulk</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasync_1_1StaticBulk.html#a1497c953695e7924e808f998b379c5cc">add_commad</a> (std::string cmd) override</td></tr>
+<tr class="memdesc:a1497c953695e7924e808f998b379c5cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add command to <a class="el" href="classasync_1_1Bulk.html">Bulk</a> When <a class="el" href="classasync_1_1Bulk.html">Bulk</a> is compleated or interrupted with new Dynamic bulk it constructs and return pointer to new <a class="el" href="classasync_1_1Bulk.html">Bulk</a>.  <a href="#a1497c953695e7924e808f998b379c5cc">More...</a><br /></td></tr>
+<tr class="separator:a1497c953695e7924e808f998b379c5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49fab53d9572e999a5fdaa6b2246ce55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasync_1_1StaticBulk.html#a49fab53d9572e999a5fdaa6b2246ce55">is_valid</a> () const override</td></tr>
 <tr class="separator:a49fab53d9572e999a5fdaa6b2246ce55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classasync_1_1Bulk"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classasync_1_1Bulk')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classasync_1_1Bulk.html">async::Bulk</a></td></tr>
@@ -171,8 +171,8 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>c
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9e6ad6576f7eee7532f5216b5e729c8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e6ad6576f7eee7532f5216b5e729c8c">&#9670;&nbsp;</a></span>addCommand()</h2>
+<a id="a1497c953695e7924e808f998b379c5cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1497c953695e7924e808f998b379c5cc">&#9670;&nbsp;</a></span>add_commad()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,7 +181,7 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="classasync_1_1Bulk.html">Bulk</a> &gt; async::StaticBulk::addCommand </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classasync_1_1Bulk.html">Bulk</a> &gt; async::StaticBulk::add_commad </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>cmd</em></td><td>)</td>

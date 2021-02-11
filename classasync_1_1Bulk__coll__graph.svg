@@ -11,17 +11,17 @@
 <!-- Node3 -->
 <g id="node1" class="node">
 <title>Node3</title>
-<polygon fill="#bfbfbf" stroke="#000000" points="141.5,-.5 141.5,-112.5 245.5,-112.5 245.5,-.5 141.5,-.5"/>
+<polygon fill="#bfbfbf" stroke="#000000" points="143,-.5 143,-112.5 244,-112.5 244,-.5 143,-.5"/>
 <text text-anchor="middle" x="193.5" y="-100.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">async::Bulk</text>
-<polyline fill="none" stroke="#000000" points="141.5,-93.5 245.5,-93.5 "/>
+<polyline fill="none" stroke="#000000" points="143,-93.5 244,-93.5 "/>
 <text text-anchor="middle" x="193.5" y="-81.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="141.5,-74.5 245.5,-74.5 "/>
-<text text-anchor="start" x="149.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Bulk()</text>
-<text text-anchor="start" x="149.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Bulk()</text>
-<text text-anchor="start" x="149.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ addCommand()</text>
-<text text-anchor="start" x="149.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ is_valid()</text>
-<text text-anchor="start" x="149.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ start_time()</text>
-<text text-anchor="start" x="149.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ output()</text>
+<polyline fill="none" stroke="#000000" points="143,-74.5 244,-74.5 "/>
+<text text-anchor="start" x="151" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Bulk()</text>
+<text text-anchor="start" x="151" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Bulk()</text>
+<text text-anchor="start" x="151" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ add_commad()</text>
+<text text-anchor="start" x="151" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ is_valid()</text>
+<text text-anchor="start" x="151" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ start_time()</text>
+<text text-anchor="start" x="151" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ output()</text>
 </g>
 <!-- Node4 -->
 <g id="node2" class="node">
@@ -36,8 +36,8 @@
 <!-- Node4&#45;&gt;Node3 -->
 <g id="edge1" class="edge">
 <title>Node4&#45;&gt;Node3</title>
-<path fill="none" stroke="#404040" d="M65.4004,-171.3376C78.8905,-158.8853 94.9263,-144.1646 109.5,-131 116.8816,-124.3321 124.6582,-117.3621 132.379,-110.4756"/>
-<polygon fill="none" stroke="#404040" points="132.4274,-110.4324 134.2487,-103.4551 141.3898,-102.4527 139.5685,-109.43 132.4274,-110.4324"/>
+<path fill="none" stroke="#404040" d="M65.4004,-171.3376C78.8905,-158.8853 94.9263,-144.1646 109.5,-131 117.2771,-123.9748 125.4927,-116.6143 133.6195,-109.3693"/>
+<polygon fill="none" stroke="#404040" points="133.7647,-109.2401 135.5877,-102.2632 142.7291,-101.2626 140.9061,-108.2395 133.7647,-109.2401"/>
 <text text-anchor="middle" x="126.5" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> #start</text>
 </g>
 <!-- Node5 -->
@@ -87,8 +87,8 @@
 <!-- Node7&#45;&gt;Node3 -->
 <g id="edge4" class="edge">
 <title>Node7&#45;&gt;Node3</title>
-<path fill="none" stroke="#404040" d="M347.8278,-171.4597C342.6753,-158.0203 335.0521,-142.4646 324.5,-131 305.7623,-110.642 280.1508,-94.3904 256.5421,-82.3265"/>
-<polygon fill="none" stroke="#404040" points="256.2828,-82.1992 249.134,-83.1452 245.5112,-76.9102 252.66,-75.9642 256.2828,-82.1992"/>
+<path fill="none" stroke="#404040" d="M347.8278,-171.4597C342.6753,-158.0203 335.0521,-142.4646 324.5,-131 305.3702,-110.216 279.076,-93.712 255.0627,-81.5747"/>
+<polygon fill="none" stroke="#404040" points="255.0164,-81.5522 247.8714,-82.5263 244.224,-76.3056 251.3691,-75.3315 255.0164,-81.5522"/>
 <text text-anchor="middle" x="383.5" y="-145" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> #cmd_bulk_close</text>
 <text text-anchor="middle" x="383.5" y="-134" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">#cmd_bulk_open</text>
 </g>

@@ -18,13 +18,13 @@
 <polyline fill="none" stroke="#000000" points="0,-52.5 116,-52.5 "/>
 <text text-anchor="start" x="8" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ DynamicBulk()</text>
 <text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~DynamicBulk()</text>
-<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ addCommand()</text>
+<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ add_commad()</text>
 <text text-anchor="start" x="8" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ is_valid()</text>
 </g>
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="classasync_1_1Bulk.html" target="_top" xlink:title="{async::Bulk\n|# max_commands\l# start\l# commands\l# cmd_bulk_open\l# cmd_bulk_close\l|+ Bulk()\l+ ~Bulk()\l+ addCommand()\l+ is_valid()\l+ start_time()\l+ output()\l}">
+<g id="a_node2"><a xlink:href="classasync_1_1Bulk.html" target="_top" xlink:title="{async::Bulk\n|# max_commands\l# start\l# commands\l# cmd_bulk_open\l# cmd_bulk_close\l|+ Bulk()\l+ ~Bulk()\l+ add_commad()\l+ is_valid()\l+ start_time()\l+ output()\l}">
 <polygon fill="none" stroke="#000000" points="3.5,-127.5 3.5,-283.5 112.5,-283.5 112.5,-127.5 3.5,-127.5"/>
 <text text-anchor="middle" x="58" y="-271.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">async::Bulk</text>
 <polyline fill="none" stroke="#000000" points="3.5,-264.5 112.5,-264.5 "/>
@@ -36,7 +36,7 @@
 <polyline fill="none" stroke="#000000" points="3.5,-201.5 112.5,-201.5 "/>
 <text text-anchor="start" x="11.5" y="-189.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Bulk()</text>
 <text text-anchor="start" x="11.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Bulk()</text>
-<text text-anchor="start" x="11.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ addCommand()</text>
+<text text-anchor="start" x="11.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ add_commad()</text>
 <text text-anchor="start" x="11.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ is_valid()</text>
 <text text-anchor="start" x="11.5" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ start_time()</text>
 <text text-anchor="start" x="11.5" y="-134.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ output()</text>

@@ -1,4 +1,4 @@
 <map id="async::Bulk" name="async::Bulk">
-<area shape="rect" id="node2" href="$classasync_1_1DynamicBulk.html" title="{async::DynamicBulk\n||+ DynamicBulk()\l+ ~DynamicBulk()\l+ addCommand()\l+ is_valid()\l}" alt="" coords="5,263,160,384"/>
-<area shape="rect" id="node3" href="$classasync_1_1StaticBulk.html" title="{async::StaticBulk\n||+ StaticBulk()\l+ ~StaticBulk()\l+ addCommand()\l+ is_valid()\l}" alt="" coords="184,263,323,384"/>
+<area shape="rect" id="node2" href="$classasync_1_1DynamicBulk.html" title="{async::DynamicBulk\n||+ DynamicBulk()\l+ ~DynamicBulk()\l+ add_commad()\l+ is_valid()\l}" alt="" coords="5,263,160,384"/>
+<area shape="rect" id="node3" href="$classasync_1_1StaticBulk.html" title="{async::StaticBulk\n||+ StaticBulk()\l+ ~StaticBulk()\l+ add_commad()\l+ is_valid()\l}" alt="" coords="185,263,319,384"/>
 </map>
