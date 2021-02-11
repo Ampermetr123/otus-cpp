@@ -13,7 +13,7 @@ namespace async
 
 
     BulkProcessor::~BulkProcessor() {
-        process();
+        handle_current_bulk();
     }
 
 
@@ -21,7 +21,6 @@ namespace async
         if (!spBulk) {
             return;
         }
-
         std::string fnamebase = "bulk" + std::to_string(spBulk->start_time());
         std::string ext = ".log";
 
@@ -40,15 +39,15 @@ namespace async
 
     void BulkProcessor::receive(std::string cmd) {
 
-        auto newBulk = spBulk->addCommand(cmd);
+        auto newBulk = spBulk->add_commad(cmd);
         if (newBulk) {
-            process();
+            handle_current_bulk();
             spBulk = std::move(newBulk);
         }
     }
 
 
-    void BulkProcessor::process()  {
+    void BulkProcessor::handle_current_bulk()  {
         if (spBulk->is_valid()) {
             auto f1 = [sp = spBulk]([[maybe_unused]] int thread_number) { sp->output(std::cout); };
             pool_cout.make_job_async(f1);
@@ -56,7 +55,6 @@ namespace async
             auto f2 = [sp = spBulk, this](int thread_number) { save(sp, std::to_string(thread_number)); };
             pool_file.make_job_async(f2);
         }
-
     }
 
 

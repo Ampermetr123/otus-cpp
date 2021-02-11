@@ -68,7 +68,7 @@ namespace async {
      * @return std::unique_ptr<Bulk> (nullptr) if bulk is not compleate
      * @return std::unique_ptr<Bulk> to new Bulk if bulk is compleate
      */
-    std::unique_ptr<Bulk> StaticBulk::addCommand(std::string cmd) {
+    std::unique_ptr<Bulk> StaticBulk::add_commad(std::string cmd) {
         if (cmd == Bulk::cmd_bulk_open) {
             return std::unique_ptr<Bulk>(new DynamicBulk(max_commands));
         }
@@ -114,7 +114,7 @@ namespace async {
      * @return std::unique_ptr<Bulk> (nullptr) if bulk is not compleate
      * @return std::unique_ptr<Bulk> to new Bulk if bulk is compleate
      */
-    std::unique_ptr<Bulk> DynamicBulk::addCommand(std::string cmd) {
+    std::unique_ptr<Bulk> DynamicBulk::add_commad(std::string cmd) {
         if (cmd == Bulk::cmd_bulk_open) {
             brace_level++;
         }

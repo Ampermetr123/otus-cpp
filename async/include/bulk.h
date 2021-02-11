@@ -21,7 +21,7 @@ namespace async {
     public:
         Bulk(size_t n);
         virtual ~Bulk() = default;
-        virtual std::unique_ptr<Bulk> addCommand(std::string cmd) = 0;
+        virtual std::unique_ptr<Bulk> add_commad(std::string cmd) = 0;
         virtual bool is_valid() const = 0;
         time_t start_time() const;
         void output(std::ostream& os) const;
@@ -37,7 +37,7 @@ namespace async {
     public:
         StaticBulk(size_t n);
         ~StaticBulk() = default;
-        std::unique_ptr<Bulk> addCommand(std::string cmd) override;
+        std::unique_ptr<Bulk> add_commad(std::string cmd) override;
         bool is_valid() const override;
     };
 
@@ -46,7 +46,7 @@ namespace async {
     public:
         DynamicBulk(size_t n);
         ~DynamicBulk() = default;
-        std::unique_ptr<Bulk> addCommand(std::string cmd) override;
+        std::unique_ptr<Bulk> add_commad(std::string cmd) override;
         bool is_valid() const override;
     private:
         int brace_level;

@@ -18,7 +18,7 @@ namespace async {
         void receive(std::string cmd);
 
     private:
-        void process();
+        void handle_current_bulk();
         void save(std::shared_ptr<Bulk> spBulk, std::string file_suffix);
         WorkersPool& pool_cout;
         WorkersPool& pool_file;
