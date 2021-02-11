@@ -4,8 +4,13 @@ cmake_minimum_required(VERSION 3.14.0 FATAL_ERROR)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 include(utils)
 
+set(project_version "0.0.0")
+if($ENV{TRAVIS_BUILD_NUMBER})
+    set(project_version "0.0.$ENV{TRAVIS_BUILD_NUMBER}") 
+endif()
+
 project("mapreduce"
-    VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER}
+    VERSION "${project_version}"
     DESCRIPTION "OTUS c++ homework #11: MapReduce"
     LANGUAGES CXX
 )
