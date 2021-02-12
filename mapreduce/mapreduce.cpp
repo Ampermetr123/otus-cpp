@@ -8,8 +8,6 @@
 #include "optlog.h"
 
 
-
-
 namespace mapreduce
 {
     using mapper_result_t = std::vector<std::string>;
@@ -49,7 +47,7 @@ namespace mapreduce
         using optlog::log1;
 
         if (reducers.empty() || mnum == 0) {
-            return;
+            throw std::invalid_argument("number of mappers and number of reducers must be greater 0");
         }
 
         auto bounds = get_file_bounds(src_file, mnum);
@@ -63,41 +61,39 @@ namespace mapreduce
             mappers_futures.push_back(
                 std::async(
                     [&mapper_func, src_file, a = p.first, b = p.second]() {
-                mapper_result_t retval;
-                auto f = std::ifstream(src_file);
-                f.seekg(a);
-                std::string line;
-                while (f.tellg() < b && std::getline(f, line)) {
-                    retval.push_back(mapper_func(line));
-                }
-                std::sort(retval.begin(), retval.end());
-                return retval;
-            }
-            )
+                        mapper_result_t retval;
+                        auto f = std::ifstream(src_file);
+                        f.seekg(a);
+                        std::string line;
+                        while (f.tellg() < b && std::getline(f, line)) {
+                            retval.push_back(mapper_func(line));
+                        }
+                        std::sort(retval.begin(), retval.end());
+                        return retval;
+                    }
+                )
             );
         }
+        
         std::vector<mapper_result_t> mappers_rusults;
         for (auto& f : mappers_futures) {
             mappers_rusults.emplace_back(f.get());
         }
         log_containers("mapper result", mappers_rusults);
 
-
+        // Shuffle
         std::vector<mapper_result_t> reducers_inputs(reducers.size());
         shuffle(mappers_rusults, reducers_inputs);
         log_containers("input to reducer", reducers_inputs);
 
-
         std::vector<std::future<void>> reducers_futures;
         for (size_t i = 0; i < reducers.size(); i++) {
-            reducers_futures.push_back(
-                std::async(
-                    [&rfunc = reducers[i], &data = reducers_inputs[i]]() {
-                for (auto& s : data) {
+            reducers_futures.push_back( std::async (
+                [&rfunc = reducers[i], &data = reducers_inputs[i]]() {
+                    for (auto& s : data) {
                     rfunc(s);
                 }
-            }
-            )
+             })
             );
         }
         for (auto& f : reducers_futures) {

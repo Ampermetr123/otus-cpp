@@ -4,15 +4,14 @@
  * @brief MapReduce. Otus homework #11.
  */
 
-#include <limits>
 #include <cstdlib>
 #include <boost/program_options.hpp>
 namespace po = boost::program_options;
 
 #include "mapreduce.h"
 #include "reducer.h"
-#include "version.h"
 #include "optlog.h"
+#include "version.h"
 
 namespace optlog {
     OptLog log0(std::cout, 0, 0);
@@ -81,33 +80,31 @@ int main(int argc, const char* argv[]) {
         while (true)
         {
             prefix_length++;
-            for (auto& r : reducers){
+            for (auto& r : reducers) {
                 r.target<CheckRepeatsReducer>()->reset(prefix_length);
             }
 
-            mapper_func_t mapper = [prefix_length](std::string& s) -> std::string {
+            mapper_func_t mapper = [prefix_length](const std::string& s) -> std::string {
                 if (s.size() > prefix_length) {
-                    s.resize(prefix_length);
+                    return std::string(s, 0, prefix_length);
                 };
                 return s;
             };
 
             mapreduce::map_reduce(src_file_name, mnum, mapper, reducers);
-            
+
             {   // Check prifix increments have no sence
-                size_t exceed_count = 0;
-                for (auto& rf : reducers) {
-                    auto r = rf.target<CheckRepeatsReducer>();
-                    if (r->max_length() < prefix_length) {
-                        exceed_count++;
+                size_t exceed_count = std::count_if(reducers.begin(), reducers.end(),
+                    [prefix_length](reducer_func_t& r) {
+                        return r.target<CheckRepeatsReducer>()->max_length() < prefix_length;
                     }
-                }
+                );
                 if (exceed_count == reducers.size()) {
                     log0 << "No minimum prefix. We need to type whole string: " << prefix_length - 1 << std::endl;
                     break;
                 }
             }
-            
+
             {   // Check all strigns with prefix length where unique 
                 bool repeats_found = false;
                 for (size_t i = 0; i < reducers.size(); i++) {

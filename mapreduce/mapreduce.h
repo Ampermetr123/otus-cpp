@@ -6,10 +6,10 @@
 
 namespace mapreduce {
    
-    using mapper_func_t = std::function<std::string(std::string&)>;
-    using reducer_func_t = std::function<void(std::string&)>;
+    using mapper_func_t = std::function<std::string(const std::string&)>;
     using mapper_result_t = std::vector<std::string>;
-    
+    using reducer_func_t = std::function<void(const std::string&)>;
+         
     /**
      * @brief MapReduce processor
      *  
@@ -20,4 +20,6 @@ namespace mapreduce {
      * @throw runtime_error, if src file is empty or not exists
      */
     void map_reduce(std::string src_file, size_t mnum, mapper_func_t& mapper_func, std::vector<reducer_func_t>& reducers);
+    
+    
 }

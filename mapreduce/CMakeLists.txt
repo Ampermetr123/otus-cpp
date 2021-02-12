@@ -9,9 +9,10 @@ target_include_directories(mapreduce PRIVATE
 )
 
 #test file for demo
-configure_file(test.txt.in test.txt)
-configure_file(test150.txt.in test150.txt)
-configure_file(test3000.txt.in test3000.txt)
+configure_file(test_data/test_dub.txt.in test_dub.txt)
+configure_file(test_data/test.txt.in test.txt)
+configure_file(test_data/test150.txt.in test150.txt)
+configure_file(test_data/test3000.txt.in test3000.txt)
 
 find_package(Boost REQUIRED COMPONENTS program_options)
 set(Boost_USE_STATIC_LIBS ON)

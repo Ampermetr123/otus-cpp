@@ -67,7 +67,7 @@ void log_containers(std::string prefix, std::vector<TCont>& containers, std::str
 
 template <typename T, template <class, class> typename Container>
 T maxval_of_ordered_conts(std::vector< Container<T, std::allocator<T> > >& vcont) {
-    std::string retval;
+    T retval;
     for (auto& cont : vcont) {
         if (cont.size() && cont.back() > retval) {
             retval = cont.back();
