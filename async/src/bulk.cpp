@@ -22,12 +22,12 @@ namespace async {
      * @brief Construct a new Bulk:: Bulk object
      * @param n maximum commands in Bulk
      */
-    Bulk::Bulk(size_t n) :max_commands(n) {
+    Bulk::Bulk(size_t n) : max_commands(n) {
     }
 
     /**
      * @brief Return timestamp of Bulk start time
-     * @return If bulk isn't valid return 0, else returns time_t (posix time).
+     * @return returns time_t of bulk start (posix time).
      */
     time_t Bulk::start_time() const {
         return std::chrono::system_clock::to_time_t(start);
@@ -68,21 +68,21 @@ namespace async {
      * @return std::unique_ptr<Bulk> (nullptr) if bulk is not compleate
      * @return std::unique_ptr<Bulk> to new Bulk if bulk is compleate
      */
-    std::unique_ptr<Bulk> StaticBulk::add_commad(std::string cmd) {
+    std::unique_ptr<Bulk> StaticBulk::add_command(std::string cmd) {
         if (cmd == Bulk::cmd_bulk_open) {
             return std::unique_ptr<Bulk>(new DynamicBulk(max_commands));
         }
-        else if (cmd == Bulk::cmd_bulk_close) {
-            ;// input error? ignore it
+        else if (cmd == Bulk::cmd_bulk_close || cmd.empty()) {
+            return nullptr; // input error? ignore it
         }
-        else {
-            // Static bulk starts with first command
-            if (commands.empty()) {
-                start = std::chrono::system_clock::now();
-            }
-            commands.push_back(cmd);
-            if (commands.size() >= max_commands)
-                return std::unique_ptr<Bulk>(new StaticBulk(max_commands));
+
+        commands.push_back(cmd);
+
+        if (commands.size() == 1) {
+            start = std::chrono::system_clock::now();
+        }
+        if (commands.size() == max_commands) {
+            return std::unique_ptr<Bulk>(new StaticBulk(max_commands));
         }
         return nullptr;
     }
@@ -91,7 +91,7 @@ namespace async {
      * @return true if Bulk is correct could be processed
      * @return false if Bulk is invalid
      */
-    bool StaticBulk::is_valid() const {
+    bool StaticBulk::processible() const {
         return !commands.empty();
     }
 
@@ -114,8 +114,11 @@ namespace async {
      * @return std::unique_ptr<Bulk> (nullptr) if bulk is not compleate
      * @return std::unique_ptr<Bulk> to new Bulk if bulk is compleate
      */
-    std::unique_ptr<Bulk> DynamicBulk::add_commad(std::string cmd) {
-        if (cmd == Bulk::cmd_bulk_open) {
+    std::unique_ptr<Bulk> DynamicBulk::add_command(std::string cmd) {
+        if (cmd.empty()) {
+            return nullptr;
+        }
+        else if (cmd == Bulk::cmd_bulk_open) {
             brace_level++;
         }
         else if (cmd == Bulk::cmd_bulk_close) {
@@ -134,7 +137,7 @@ namespace async {
      * @return true if Bulk is correct could be processed.
      * @return false if Bulk is invalid
      */
-    bool DynamicBulk::is_valid() const {
+    bool DynamicBulk::processible() const {
         return (brace_level == 0);
     }
 

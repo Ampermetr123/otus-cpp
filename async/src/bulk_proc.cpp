@@ -22,7 +22,7 @@ namespace async
             return;
         }
         std::string fnamebase = "bulk" + std::to_string(spBulk->start_time());
-        std::string ext = ".log";
+        const std::string ext = ".log";
 
         // Ensure each bulk has unique file
         std::filesystem::path fpath = fnamebase + "." + file_suffix + ext;
@@ -39,7 +39,7 @@ namespace async
 
     void BulkProcessor::receive(std::string cmd) {
 
-        auto newBulk = spBulk->add_commad(cmd);
+        auto newBulk = spBulk->add_command(cmd);
         if (newBulk) {
             handle_current_bulk();
             spBulk = std::move(newBulk);
@@ -48,7 +48,7 @@ namespace async
 
 
     void BulkProcessor::handle_current_bulk()  {
-        if (spBulk->is_valid()) {
+        if (spBulk->processible()) {
             auto f1 = [sp = spBulk]([[maybe_unused]] int thread_number) { sp->output(std::cout); };
             pool_cout.make_job_async(f1);
 
