@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['output',['output',['../classasync_1_1Bulk.html#a5042d5de4b6ff0bc3217f9eeff6db55d',1,'async::Bulk']]]
+  ['processible',['processible',['../classasync_1_1StaticBulk.html#aa0454e98ae92f9ee5d8b1a72d259f0ac',1,'async::StaticBulk::processible()'],['../classasync_1_1DynamicBulk.html#a129fb9821dca295d25f9e559e2b4e986',1,'async::DynamicBulk::processible()']]]
 ];

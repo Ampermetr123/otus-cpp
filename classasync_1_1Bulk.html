@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">async
-   &#160;<span id="projectnumber">0.0.69</span>
+   &#160;<span id="projectnumber">0.0.73</span>
    </div>
    <div id="projectbrief">OTUS c++ homework #8: async</div>
   </td>
@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('classasync_1_1Bulk.html','');});
 <div class="dynheader">
 Inheritance diagram for async::Bulk:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classasync_1_1Bulk__inherit__graph.svg" width="326" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classasync_1_1Bulk__inherit__graph.svg" width="334" height="375"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -109,12 +109,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afcda5cdbebd14ebcbbee05ba0b1647d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasync_1_1Bulk.html#afcda5cdbebd14ebcbbee05ba0b1647d7">Bulk</a> (size_t n)</td></tr>
 <tr class="memdesc:afcda5cdbebd14ebcbbee05ba0b1647d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classasync_1_1Bulk.html">Bulk</a>:: <a class="el" href="classasync_1_1Bulk.html">Bulk</a> object.  <a href="#afcda5cdbebd14ebcbbee05ba0b1647d7">More...</a><br /></td></tr>
 <tr class="separator:afcda5cdbebd14ebcbbee05ba0b1647d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa81ca4b52fdc5ff68df832cdc7389c7a"><td class="memItemLeft" align="right" valign="top"><a id="aa81ca4b52fdc5ff68df832cdc7389c7a"></a>
-virtual std::unique_ptr&lt; <a class="el" href="classasync_1_1Bulk.html">Bulk</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>add_commad</b> (std::string cmd)=0</td></tr>
-<tr class="separator:aa81ca4b52fdc5ff68df832cdc7389c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a408f920d6ee45161f6ed208bf4c59f66"><td class="memItemLeft" align="right" valign="top"><a id="a408f920d6ee45161f6ed208bf4c59f66"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_valid</b> () const =0</td></tr>
-<tr class="separator:a408f920d6ee45161f6ed208bf4c59f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a526a4f35eff3e9aa59e897b6b58e02fa"><td class="memItemLeft" align="right" valign="top"><a id="a526a4f35eff3e9aa59e897b6b58e02fa"></a>
+virtual std::unique_ptr&lt; <a class="el" href="classasync_1_1Bulk.html">Bulk</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>add_command</b> (std::string cmd)=0</td></tr>
+<tr class="separator:a526a4f35eff3e9aa59e897b6b58e02fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f0985eb8987110fec80cd95d880b08"><td class="memItemLeft" align="right" valign="top"><a id="af0f0985eb8987110fec80cd95d880b08"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>processible</b> () const =0</td></tr>
+<tr class="separator:af0f0985eb8987110fec80cd95d880b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e32ebb72709ad2406f69b01c9ba3414"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasync_1_1Bulk.html#a7e32ebb72709ad2406f69b01c9ba3414">start_time</a> () const</td></tr>
 <tr class="memdesc:a7e32ebb72709ad2406f69b01c9ba3414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return timestamp of <a class="el" href="classasync_1_1Bulk.html">Bulk</a> start time.  <a href="#a7e32ebb72709ad2406f69b01c9ba3414">More...</a><br /></td></tr>
 <tr class="separator:a7e32ebb72709ad2406f69b01c9ba3414"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,7 +213,7 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>c
 </div><div class="memdoc">
 
 <p>Return timestamp of <a class="el" href="classasync_1_1Bulk.html">Bulk</a> start time. </p>
-<dl class="section return"><dt>Returns</dt><dd>If bulk isn't valid return 0, else returns time_t (posix time). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>returns time_t of bulk start (posix time). </dd></dl>
 
 </div>
 </div>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0',1,'main.cpp']]],
-  ['make_5fjob_5fasync',['make_job_async',['../classasync_1_1WorkersPool.html#ae7493c58cf762e6706260eaf96676714',1,'async::WorkersPool']]]
+  ['output',['output',['../classasync_1_1Bulk.html#a5042d5de4b6ff0bc3217f9eeff6db55d',1,'async::Bulk']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['is_5fvalid',['is_valid',['../classasync_1_1StaticBulk.html#a49fab53d9572e999a5fdaa6b2246ce55',1,'async::StaticBulk::is_valid()'],['../classasync_1_1DynamicBulk.html#ae00d82a9ac851cba664a90c5d2efc31d',1,'async::DynamicBulk::is_valid()']]]
+  ['main',['main',['../main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0',1,'main.cpp']]],
+  ['make_5fjob_5fasync',['make_job_async',['../classasync_1_1WorkersPool.html#ae7493c58cf762e6706260eaf96676714',1,'async::WorkersPool']]]
 ];

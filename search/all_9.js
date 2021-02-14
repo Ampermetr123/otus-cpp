@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['randombracegenerator',['RandomBraceGenerator',['../classRandomBraceGenerator.html',1,'RandomBraceGenerator'],['../classRandomBraceGenerator.html#ac6cfab7c6bb7f63143bf4590f6221b67',1,'RandomBraceGenerator::RandomBraceGenerator()']]],
-  ['receive',['receive',['../async_8h.html#aa3a178bad66858bb737d3cf329ae3914',1,'async']]]
+  ['processible',['processible',['../classasync_1_1StaticBulk.html#aa0454e98ae92f9ee5d8b1a72d259f0ac',1,'async::StaticBulk::processible()'],['../classasync_1_1DynamicBulk.html#a129fb9821dca295d25f9e559e2b4e986',1,'async::DynamicBulk::processible()']]]
 ];

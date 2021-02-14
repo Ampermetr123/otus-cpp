@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['workers_5fpool_2ecpp',['workers_pool.cpp',['../workers__pool_8cpp.html',1,'']]],
-  ['workers_5fpool_2eh',['workers_pool.h',['../workers__pool_8h.html',1,'']]],
-  ['workerspool',['WorkersPool',['../classasync_1_1WorkersPool.html',1,'async::WorkersPool'],['../classasync_1_1WorkersPool.html#a6abf5a18f9a5f881957aa1f530ce08b4',1,'async::WorkersPool::WorkersPool()']]]
+  ['start_5ftime',['start_time',['../classasync_1_1Bulk.html#a7e32ebb72709ad2406f69b01c9ba3414',1,'async::Bulk']]],
+  ['staticbulk',['StaticBulk',['../classasync_1_1StaticBulk.html',1,'async::StaticBulk'],['../classasync_1_1StaticBulk.html#a7f7b4647b3a0c52bcee82186d1a22508',1,'async::StaticBulk::StaticBulk()']]]
 ];

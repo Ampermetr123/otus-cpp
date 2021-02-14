@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['start_5ftime',['start_time',['../classasync_1_1Bulk.html#a7e32ebb72709ad2406f69b01c9ba3414',1,'async::Bulk']]],
-  ['staticbulk',['StaticBulk',['../classasync_1_1StaticBulk.html',1,'async::StaticBulk'],['../classasync_1_1StaticBulk.html#a7f7b4647b3a0c52bcee82186d1a22508',1,'async::StaticBulk::StaticBulk()']]]
+  ['randombracegenerator',['RandomBraceGenerator',['../classRandomBraceGenerator.html',1,'RandomBraceGenerator'],['../classRandomBraceGenerator.html#ac6cfab7c6bb7f63143bf4590f6221b67',1,'RandomBraceGenerator::RandomBraceGenerator()']]],
+  ['receive',['receive',['../async_8h.html#aa3a178bad66858bb737d3cf329ae3914',1,'async']]]
 ];
