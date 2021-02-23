@@ -1,70 +1,87 @@
 #pragma once
 
 #include <functional>
+#include <memory>
+#include <type_traits>
+#include <set>
 
+
+/**
+ * @brief Iterator for IterableReuslt
+ * Intended to support range for
+ */
 class ResultIterator {
-    std::function<const std::string& ()> deref_func;
-    std::function<bool()> inc_func;
-    bool flag_end;
+    using deref_func_t = std::function<const std::string()>;
+    using inc_func_t = std::function<bool()>;
 public:
-
-    ResultIterator() :flag_end(true) {
-    }
-
-    ResultIterator(std::function<std::string()> deref_func, std::function<bool()> inc_func)
-        : deref_func(deref_func), inc_func(inc_func), flag_end(false) {
-    }
-
-    const std::string& operator*() {
-        if (flag_end) {
-            throw std::out_of_range("Can't dereference end StorageResultIterator");
-        }
-        if (!deref_func) {
-            throw std::runtime_error("Invalid dereference function in StorageResultIterator");
-        }
-        return deref_func();
-    }
-
-    ResultIterator& operator++() {
-        flag_end = inc_func ? true : !inc_func();
-        return *this;
-    }
-
-    bool operator!=(const ResultIterator& rv) {
-        return flag_end != rv.flag_end;
-    };
+    ResultIterator();
+    ResultIterator(deref_func_t deref_func, inc_func_t inc_func);
+    ResultIterator& operator=(const ResultIterator&) = delete;
+    ResultIterator(ResultIterator&) = delete;
+    const std::string operator*();
+    ResultIterator& operator++();
+    bool operator!=(const ResultIterator& rv);
+private:
+    deref_func_t deref_func;
+    inc_func_t inc_func;
+    bool flag_end;
 };
 
 
+/**
+ * @brief Base for IterableResult - the strings, that could be forward iterated
+ * IterableResult also have logic marker success or false
+ */
 class IterableResult {
     bool success;
 public:
     IterableResult(bool success = false) : success(success) {};
     virtual ResultIterator begin() = 0;
-    virtual ResultIterator end() = 0;
-    operator bool() {
-        return success;
-    };
+    virtual ResultIterator end() { return ResultIterator(); };
+    operator bool() const { return success; };
     virtual size_t size() = 0;
 };
 
 
-
+/**
+ * @brief IterableResult with just one string
+ */
 class StringResult : public IterableResult {
     std::string str;
 public:
-    StringResult(std::string str, bool success = true) : IterableResult(success), str(str) {};
-    ResultIterator begin() override {
-        auto deref = [&val = str]() {
-            return val;
-        };
-        return ResultIterator(deref, nullptr);
-    };
-    ResultIterator end() override {
-        return ResultIterator();
-    };
-    virtual size_t size() override {
-        return 0;
-    };
+    StringResult(std::string str, bool success = true);
+    ResultIterator begin() override;
+    virtual size_t size() override;
 };
 
+/**
+ * @brief IterableResult with container of string
+  * @tparam T_Containter set<string>, vector<string> etc..
+ */
+template <typename T_Containter,
+    class C = std::enable_if<std::is_convertible<typename T_Containter::value_type, std::string>::value, void >::type>
+class ContResult : public IterableResult {
+    T_Containter cont;
+public:
+    ContResult(T_Containter cont_of_str, bool success = true)
+        : IterableResult(success), cont(std::move(cont_of_str)) {
+    };
+
+    ResultIterator begin() override {
+        auto iter = std::make_shared<typename T_Containter::iterator>(cont.begin());
+        auto deref = [it = iter]() mutable -> const std::string {
+            auto r = *(*it);
+            std::string s = r;
+            return s;
+        };
+        auto increment = [end = cont.end(), it = iter]() {
+            return (++(*it) != end);
+        };
+        return ResultIterator(deref, increment);
+    };
+
+    virtual size_t size() override {
+        return cont.size();
+    };
+
+};

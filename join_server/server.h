@@ -15,7 +15,7 @@ public:
     void run();
 private:
     const optlog::OptLog log1;
-    ba::io_context io_context;
+    ba::io_service io_service;
     ba::ip::tcp::endpoint tcp_endpoint;
     ba::ip::tcp::acceptor acceptor;
     void do_accept();

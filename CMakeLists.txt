@@ -4,21 +4,33 @@ cmake_minimum_required(VERSION 3.14.0 FATAL_ERROR)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 include(utils)
 
+
 project("join_server"
     VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER}
     DESCRIPTION "OTUS c++ homework #10: join_server"
     LANGUAGES CXX
 )
 
-# generate docs
-option(BUILD_DOCUMENTATION "Build documentation" ON)
-
+# pthread required
 set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
 set(THREADS_PREFER_PTHREAD_FLAG TRUE)
 find_package(Threads REQUIRED)
 
-add_subdirectory(join_server)
+# gtest
+set(BUILD_GMOCK ON CACHE BOOL "" FORCE)
+add_subdirectory("googletest" "googletest")
+if (MSVC)
+    set(gtest_force_shared_crt ON cache BOOL "" FORCE)
+endif()
+include(CTest)
+enable_testing()
 
+
+add_subdirectory(join_server)
+add_subdirectory(join_server/test)
+
+# generate docs options
+option(BUILD_DOCUMENTATION "Build documentation" ON)
 # Documentation setup
 if(BUILD_DOCUMENTATION)
     find_package(Doxygen
@@ -61,8 +73,7 @@ set(CPACK_PACKAGE_CONTACT ssbdex@yandex.ru)
 include(CPack)
 
 
-include(CTest)
-enable_testing()
+
 
 
 

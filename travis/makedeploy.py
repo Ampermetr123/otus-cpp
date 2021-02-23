@@ -6,7 +6,7 @@ text = '''{
         "name": "%s",
         "repo": "otus-cpp",
         "subject": "ampermetr123",
-        "desc": "Homework 11 of OTUS-CPP course",
+        "desc": "Homework 10 of OTUS-CPP course",
         "website_url": "https://ampermetr123.github.io/otus-cpp/",
         "issue_tracker_url": "https://github.com/Ampermetr123/otus-cpp/issues",
         "vcs_url": "https://github.com/Ampermetr123/otus-cpp.git",

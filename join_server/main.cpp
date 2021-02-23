@@ -5,12 +5,10 @@
  */
 
 #include <boost/program_options.hpp>
-
 #include "version.h"
 #include "server.h"
 
 namespace po = boost::program_options;
-
 
 int main(int argc, const char* argv[]) {
     try {

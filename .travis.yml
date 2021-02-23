@@ -38,6 +38,6 @@ deploy:
     cleanup: false # to upload artifacts created during the build
     skip_cleanup: true
     on:
-      branch: hw110
+      branch: hw10
     
   
