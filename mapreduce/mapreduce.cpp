@@ -5,42 +5,13 @@
 #include <functional>
 #include <exception>
 #include "helpers.h"
+#include "shuffle.h"
 #include "optlog.h"
 
 
 namespace mapreduce
 {
     using mapper_result_t = std::vector<std::string>;
-
-    /**
-     * @brief Shuffle data (one thread) from M vectors to N vecotrs
-     * @note the same data go to the same container N
-     * @note change the order direction
-     * @tparam T type of data
-     * @param mcont souce M vectors with sorted data
-     * @param rcont destination N vectors with sorted data
-     */
-    template <typename T>
-    void shuffle(std::vector< std::vector<T> >& mcont, std::vector< std::vector<T> >& rcont) {
-        int mcont_size = mcont.size();
-        int rcont_size = rcont.size();
-        if ((mcont_size == 0) || (rcont_size == 0))
-            return;
-
-        auto maxval = maxval_of_ordered_conts(mcont);
-        std::vector<T>* pr;
-        while (maxval != std::string("")) {
-            pr = less_filled_cont(rcont);
-            for (auto& m : mcont) {
-                while (m.size() && m.back() == maxval) {
-                    pr->push_back(std::move(m.back()));
-                    m.pop_back();
-                }
-            }
-            maxval = maxval_of_ordered_conts(mcont);
-        }
-    }
-
 
     void map_reduce(std::string src_file, size_t mnum, mapper_func_t& mapper_func, std::vector<reducer_func_t>& reducers) {
         using optlog::log0;

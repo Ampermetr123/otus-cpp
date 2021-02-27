@@ -25,7 +25,7 @@ find_package(Threads REQUIRED)
 
 
 add_subdirectory(mapreduce)
-
+add_subdirectory(test)
 # Documentation setup
 
 if(BUILD_DOCUMENTATION)
