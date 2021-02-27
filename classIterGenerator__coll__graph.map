@@ -1,3 +1,4 @@
 <map id="IterGenerator&lt; Iter &gt;" name="IterGenerator&lt; Iter &gt;">
-<area shape="rect" id="node2" href="$classGenerator.html" title="String data Generator interface. " alt="" coords="30,5,142,127"/>
+<area shape="rect" id="node2" href="$classGenerator.html" title="{Generator\&lt; Iter::value\l_type \&gt;\n||+ Generator()\l+ begin()\l+ end()\l+ get()\l}" alt="" coords="5,189,173,325"/>
+<area shape="rect" id="node3" href="$classGenerator.html" title="data of type T Generator interface " alt="" coords="27,5,152,127"/>
 </map>

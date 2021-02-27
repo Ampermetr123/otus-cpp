@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>async: Generator::Iterator Class Reference</title>
+<title>async: Generator&lt; T &gt;::Iterator Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">async
-   &#160;<span id="projectnumber">0.0.73</span>
+   &#160;<span id="projectnumber">0.0.75</span>
    </div>
    <div id="projectbrief">OTUS c++ homework #8: async</div>
   </td>
@@ -86,34 +86,33 @@ $(document).ready(function(){initNavTree('classGenerator_1_1Iterator.html','');}
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classGenerator_1_1Iterator-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Generator::Iterator Class Reference</div>  </div>
+<div class="title">Generator&lt; T &gt;::Iterator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-Collaboration diagram for Generator::Iterator:</div>
+Collaboration diagram for Generator&lt; T &gt;::Iterator:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGenerator_1_1Iterator__coll__graph.svg" width="154" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGenerator_1_1Iterator__coll__graph.svg" width="192" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6d5ed2747857438c40cc83f04b74ca67"><td class="memItemLeft" align="right" valign="top"><a id="a6d5ed2747857438c40cc83f04b74ca67"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Iterator</b> (<a class="el" href="classGenerator.html">Generator</a> &amp;<a class="el" href="classGenerator.html">Generator</a>, bool _end=false)</td></tr>
-<tr class="separator:a6d5ed2747857438c40cc83f04b74ca67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6b854d7398691f0cb0afd57f88e67a9"><td class="memItemLeft" align="right" valign="top"><a id="aa6b854d7398691f0cb0afd57f88e67a9"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> ()</td></tr>
-<tr class="separator:aa6b854d7398691f0cb0afd57f88e67a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5965a424cf92d713dfc0eb685205f4f5"><td class="memItemLeft" align="right" valign="top"><a id="a5965a424cf92d713dfc0eb685205f4f5"></a>
+<tr class="memitem:a5ee5d0df64d4bfd26f73f273091aba87"><td class="memItemLeft" align="right" valign="top"><a id="a5ee5d0df64d4bfd26f73f273091aba87"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Iterator</b> (<a class="el" href="classGenerator.html">Generator</a> &amp;generator, bool _end=false)</td></tr>
+<tr class="separator:a5ee5d0df64d4bfd26f73f273091aba87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb691a7dd34c2b438480751020e6035"><td class="memItemLeft" align="right" valign="top"><a id="a0bb691a7dd34c2b438480751020e6035"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> ()</td></tr>
+<tr class="separator:a0bb691a7dd34c2b438480751020e6035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8227c05b20bf0aa916df86f409cf42"><td class="memItemLeft" align="right" valign="top"><a id="a2b8227c05b20bf0aa916df86f409cf42"></a>
 <a class="el" href="classGenerator_1_1Iterator.html">Iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> ()</td></tr>
-<tr class="separator:a5965a424cf92d713dfc0eb685205f4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a555baebfe402405b9beb7d3bc6c70714"><td class="memItemLeft" align="right" valign="top"><a id="a555baebfe402405b9beb7d3bc6c70714"></a>
+<tr class="separator:a2b8227c05b20bf0aa916df86f409cf42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc138da3feb9a6292cd9e88a866f0b9"><td class="memItemLeft" align="right" valign="top"><a id="aebc138da3feb9a6292cd9e88a866f0b9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classGenerator_1_1Iterator.html">Iterator</a> &amp;rv)</td></tr>
-<tr class="separator:a555baebfe402405b9beb7d3bc6c70714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:aebc138da3feb9a6292cd9e88a866f0b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>async_demo/<a class="el" href="generator_8h_source.html">generator.h</a></li>
-<li>async_demo/generator.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

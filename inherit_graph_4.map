@@ -1,5 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classGenerator.html" title="String data Generator interface. " alt="" coords="5,31,92,57"/>
-<area shape="rect" id="node2" href="$classIterGenerator.html" title="Generator for any iterated data. " alt="" coords="149,5,310,32"/>
-<area shape="rect" id="node3" href="$classRandomBraceGenerator.html" title="Generator for random commands with braces Generated string template is {prefix}{index}, where index = 1,2,3...len or &quot;{&quot; or &quot;}&quot;. " alt="" coords="140,56,319,83"/>
+<area shape="rect" id="node1" href="$classGenerator.html" title="Generator\&lt; Iter::value\l_type \&gt;" alt="" coords="5,5,173,47"/>
+<area shape="rect" id="node2" href="$classIterGenerator.html" title="Generator for any iterated data. " alt="" coords="221,13,383,39"/>
 </map>

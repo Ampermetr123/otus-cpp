@@ -1,4 +1,6 @@
-<map id="Generator" name="Generator">
-<area shape="rect" id="node2" href="$classIterGenerator.html" title="Generator for any iterated data. " alt="" coords="5,175,167,267"/>
-<area shape="rect" id="node3" href="$classRandomBraceGenerator.html" title="Generator for random commands with braces Generated string template is {prefix}{index}, where index = 1,2,3...len or &quot;{&quot; or &quot;}&quot;. " alt="" coords="191,175,394,267"/>
+<map id="Generator&lt; T &gt;" name="Generator&lt; T &gt;">
+<area shape="rect" id="node2" href="$classGenerator.html" title="{Generator\&lt; std::string \&gt;\n||+ Generator()\l+ begin()\l+ end()\l+ get()\l}" alt="" coords="18,197,201,318"/>
+<area shape="rect" id="node4" href="$classGenerator.html" title="{Generator\&lt; Iter::value\l_type \&gt;\n||+ Generator()\l+ begin()\l+ end()\l+ get()\l}" alt="" coords="228,189,396,325"/>
+<area shape="rect" id="node3" href="$classRandomBraceGenerator.html" title="Generator for random commands with braces Generated string template is {prefix}{index}, where index = 1,2,3...len or &quot;{&quot; or &quot;}&quot;. " alt="" coords="5,375,208,467"/>
+<area shape="rect" id="node5" href="$classIterGenerator.html" title="Generator for any iterated data. " alt="" coords="233,375,394,467"/>
 </map>
