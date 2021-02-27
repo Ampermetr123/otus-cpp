@@ -30,6 +30,7 @@ list(APPEND EXTRA_INCLUDES "${PROJECT_SOURCE_DIR}/async/inc")
 
 add_subdirectory(async_demo)
 
+add_subdirectory(test)
 
 # Documentation setup
 

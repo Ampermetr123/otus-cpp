@@ -20,7 +20,7 @@ int main(int, char**) {
      * @param gen generator of data
      * @param bulk_size - size of bulk (passed to connect() )
      */
-    auto func = [](Generator& gen, int bulk_size) {
+    auto func = [](Generator<std::string>& gen, int bulk_size) {
         auto handle = async::connect(bulk_size);
         for (const auto& v : gen) {
             async::receive(handle, v.c_str(), v.size());
