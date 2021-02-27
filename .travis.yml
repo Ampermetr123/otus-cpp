@@ -21,6 +21,7 @@ addons:
 script:
 - export CC=gcc-9
 - export CXX=g++-9
+- git clone https://github.com/google/googletest
 - cmake --version
 - cmake  -S . -B build -DCMAKE_BUILD_TYPE:STRING=Release
 - cmake --build build 
