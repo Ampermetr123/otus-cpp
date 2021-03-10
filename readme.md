@@ -1,5 +1,20 @@
 # Задание 7 Bayan
 
+### Command line options:
+
+```
+  -I [ --include-dir ] arg        Including directories to scan
+  -E [ --exclude-dir ] arg        Excluding directories from scan
+  -r [ --recursive ]              Scan recursively (subdirectories included)
+  -s [ --min-size ] arg           Minimum file size to scan
+  -M [ --file-masks ] arg         One or more file masks to scan
+  -b [ --block-size ] arg (=1024) size of chunk in bytes for hash calculating, 
+                                  maximum 1 Mb
+  -H [ --hash ] arg (=0)          Hash alogorithm: 0 - md5; 1 - sha1
+  -h [ --help ]                   print this help message
+  --version                       print version
+```
+
 ## Условие
 
 Пользуясь имеющимися в библиотеке _Boost_ структурами и алгоритмами разработать утилиту для обнаружения файлов-дубликатов. Утилита должна иметь возможность через параметры командной строки указывать:
