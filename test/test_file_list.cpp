@@ -51,7 +51,7 @@ TEST(Test_File_list, Test_FileList_size_filter) {
     std::list<fs::path> inc_dir = { fs::path("./test_dirs/dir3") };
     auto list = build_file_list(inc_dir,
         { make_filter_exclude_dir(fs::path("test_dirs/dir3")),
-          make_filter_min_file_size(8)
+          make_filter_min_file_size(4)
         }
     );
     EXPECT_EQ(list.size(), 1);

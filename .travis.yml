@@ -25,7 +25,10 @@ script:
 - cmake --version
 - cmake  -S . -B build -DCMAKE_BUILD_TYPE:STRING=Release
 - cmake --build build 
-#- cmake --build build --target doc
+- cd build/test
+- ctest
+- cd ../..
+#-cmake --build build --target doc
 - cmake --build build --target package
 
 before_deploy:
