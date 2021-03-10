@@ -32,8 +32,7 @@ private:
     inline static const int max_data_lenght = 512;
     char data[max_data_lenght];
     std::string tail; // rest of string without \n
-
-public:
+    
     Session(ba::ip::tcp::socket sock, size_t bulk_size, const optlog::OptLog& log) :
         socket(std::move(sock)),
         logger(log) {
@@ -41,7 +40,8 @@ public:
         logger << "Conneced with " << socket.remote_endpoint().address().to_string() << std::endl;
     }
 
-
+public:
+  
     ~Session() {
         if (tail.size()) { // End of seession is like EOF
             async::receive(async_handle, tail.c_str(), tail.size());
@@ -50,9 +50,8 @@ public:
         logger << "Connection closed with " << socket.remote_endpoint().address().to_string() << std::endl;
     }
 
-
     static auto create(ba::ip::tcp::socket sock, size_t bulk_size, const optlog::OptLog& log) {
-        return std::make_shared<Session>(std::move(sock), bulk_size, log);
+         return std::shared_ptr<Session>(new Session(std::move(sock), bulk_size, log));
     }
 
     /**
