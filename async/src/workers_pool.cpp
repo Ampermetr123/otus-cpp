@@ -11,9 +11,9 @@ namespace async {
      * @brief Construct a new Workers Pool:: Workers Pool object
      * @param num_threads number of workers in pool
      */
-    WorkersPool::WorkersPool(int num_threads) : threads(num_threads) {
-        flag_abort = (num_threads > 0) ? false : true;
-        flag_finish = false;
+    WorkersPool::WorkersPool(int num_threads) {
+        flag_abort = flag_finish = false;
+        threads.reserve(num_threads);
         for (int i = 0; i < num_threads; i++) {
             threads.emplace_back(&WorkersPool::worker, this, i);
         }
