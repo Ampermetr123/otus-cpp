@@ -1,0 +1,44 @@
+dist:
+  bionic
+language: cpp    
+compiler: gcc
+before_script:
+- echo "deb http://archive.ubuntu.com/ubuntu bionic main universe" | sudo tee -a /etc/apt/sources.list
+- sudo apt-get update -qq 
+- sudo apt-get install doxygen
+- sudo apt-get install graphviz
+- source travis/update-cmake.sh
+
+addons:
+  apt:
+    sources:
+      - sourceline: 'ppa:mhier/libboost-latest'
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-9
+      - libboost1.74-dev
+
+script:
+- export CC=gcc-9
+- export CXX=g++-9
+- git clone https://github.com/google/googletest
+- git clone https://github.com/davisking/dlib dlib
+- cmake --version
+- cmake  -S . -B build -DCMAKE_BUILD_TYPE:STRING=Release
+- cmake --build build 
+- cmake --build build --target package
+
+before_deploy:
+  python travis/makedeploy.py
+
+deploy:
+  - provider: bintray
+    file: "deploy.txt"
+    user: "ampermetr123"
+    key: "$BINTRAY_API_KEY"
+    cleanup: false # to upload artifacts created during the build
+    skip_cleanup: true
+    on:
+      branch: hw12
+    
+  
