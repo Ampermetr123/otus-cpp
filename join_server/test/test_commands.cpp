@@ -4,12 +4,11 @@
 #include "storage.h"
 #include <vector>
 
-
         
 class MockStorage : public Storage {
 public:
-    MOCK_METHOD(storage_result_t, insert, (std::string table, storage_index_t id, storage_data_t data), (override));
-    MOCK_METHOD(storage_result_t, truncate, (std::string table), (override));
+    MOCK_METHOD(storage_result_t, insert, (const std::string& table, storage_index_t id, const storage_data_t& data), (override));
+    MOCK_METHOD(storage_result_t, truncate, (const std::string& table), (override));
     MOCK_METHOD(storage_result_t, intersection, (), (override));
     MOCK_METHOD(storage_result_t, difference, (), (override));
 };
